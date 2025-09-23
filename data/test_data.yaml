@@ -1,0 +1,31 @@
+interfaces:
+  login:
+    url: /wx/auth/login
+    method: POST
+    headers:
+      Content-Type: application/json
+#  query:
+#    url: /resources
+#    method: GET
+
+test_cases:
+  login:
+    username: user123
+    password: user123
+
+  login_fail:             # 新增
+    username: baduser
+    password: wrongpwd
+
+expected:
+  login:
+    status:  success
+    token_present: true
+    errno: 0
+    errmsg: 成功
+
+  login_fail: # 期望结果
+    status: fail
+    token_present: false
+    errno: 700
+    errmsg: 账号不存在

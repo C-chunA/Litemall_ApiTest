@@ -1,0 +1,12 @@
+interfaces:
+  update_cart:
+    url: /wx/cart/update
+    method: POST
+    headers:
+      Content-Type: application/json
+
+
+expected:
+  update_success:
+    errno: 0
+    errmsg: 成功

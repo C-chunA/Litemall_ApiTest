@@ -1,0 +1,3 @@
+2025-09-22 10:52:49,062 - INFO - POST http://112.126.74.187/wx/auth/login with status 200
+2025-09-22 10:52:49,062 - INFO - Login keyword executed
+2025-09-22 10:52:49,131 - INFO - POST http://112.126.74.187/wx/cart/add with status 200

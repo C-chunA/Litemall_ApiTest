@@ -1,0 +1,54 @@
+interfaces:
+  add_to_cart:
+    url: /wx/cart/add
+    method: POST
+    headers:
+      Content-Type: application/json
+
+test_cases:
+  add_success:
+    goodsId: 1009024
+    number: 1
+    productId: 16
+
+  add_null_goodsId: #添加 goodsId空值
+    goodsId: null
+    number: 1
+    productId: 16
+
+  add_insufficient_stock: #添加超过库存的数量商品
+    goodsId: 1009024  # 使用一个存在的商品
+    productId: 242
+    number: 150
+
+  add_not_exist_goods: #添加库存不存在的商品编号
+    goodsId: 110  # 使用一个不存在的商品id
+    productId: 242
+    number: 1
+
+  add_number_zero: #添加数量为0
+    goodsId: 1009024  # 使用一个不存在的商品id
+    productId: 242
+    number: 0
+
+
+expected:
+  add_success:
+    errno: 0
+    errmsg: 成功
+
+  add_null_goodsId:
+    errno: 401
+    errmsg: 参数不对
+
+  add_insufficient_stock:
+    errno: 711
+    errmsg: 库存不足
+
+  add_not_exist_goods:
+    errno: 710
+    errmsg: 商品已下架
+
+  add_number_zero:
+    errno: 401
+    errmsg: 参数不对

@@ -1,0 +1,29 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+一个函数覆盖所有登录场景（成功、失败等）。
+","150","【关键字驱动】登录测试：login","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestAuth","test_cases","",""
+"","165","Test successful login","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:03 CST 2025","TestAuth","test_cases","",""
+"
+一個函數覆蓋所有添加購物車的測試場景。
+","69","【關鍵字驅動】購物車測試：add_success","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestShoppingCart","test_add_shopptcart","",""
+"
+一個函數覆蓋所有添加購物車的測試場景。
+","63","【關鍵字驅動】購物車測試：add_null_goodsId","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestShoppingCart","test_add_shopptcart","",""
+"
+一個函數覆蓋所有添加購物車的測試場景。
+","102","【關鍵字驅動】購物車測試：add_insufficient_stock","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestShoppingCart","test_add_shopptcart","",""
+"
+测试场景：已认证用户成功获取个人信息。
+
+步骤：
+1. 从 user_info.yaml 加载测试数据。
+2. 使用 authenticated_client (已自动登录) 调用 'info' 接口。
+3. 验证响应状态码和业务码是否符合预期。
+","61","Test getting user info successfully","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:04 CST 2025","TestUserInfo","test_user_info","",""
+"","64","Test login failure - invalid credential","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:03 CST 2025","TestAuth","test_cases","",""
+"
+一个函数覆盖所有获取用户信息的场景。
+","62","【关键字驱动】获取用户信息测试：get_info_success","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:50 CST 2025","TestUserInfo","test_user_info","",""
+"
+一个函数覆盖所有登录场景（成功、失败等）。
+","72","【关键字驱动】登录测试：login_fail","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestAuth","test_cases","",""

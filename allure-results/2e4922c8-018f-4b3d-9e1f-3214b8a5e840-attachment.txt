@@ -1,0 +1,2 @@
+2025-09-19 14:18:03,945 - INFO - POST http://112.126.74.187/wx/auth/login with status 200
+2025-09-19 14:18:04,005 - INFO - GET http://112.126.74.187/wx/auth/info with status 200

@@ -1,0 +1,14 @@
+interfaces:
+  info:
+    url: /wx/auth/info
+    method: GET
+    headers:
+      Content-Type: application/json
+
+
+expected:
+  info:
+    status:  success
+    errno: 0
+    errmsg: 成功
+
