@@ -1,11 +1,8 @@
 import requests
-import logging
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class RequestHandler:
-    def __init__(self):
-        self.logger = logging.getLogger('RequestHandler')
+    def __init__(self, logger):
+        self.logger = logger
 
     def get(self, url, params=None, headers=None):
         response = requests.get(url, params=params, headers=headers)
