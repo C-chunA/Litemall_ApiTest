@@ -8,7 +8,7 @@ from utils.data_loader import load_yaml_test_data
 TEST_DIR = Path(__file__).resolve().parent
 DATA_FILE = TEST_DIR.parent.parent / 'data' / 'query_shoppingcart_info.yaml'
 
-
+@pytest.mark.shopping_cart
 @allure.feature("Shopping Cart Management")
 class TestShoppingCartInfo:
     """
@@ -16,6 +16,7 @@ class TestShoppingCartInfo:
     """
 
     @allure.story("Query Cart Info")
+    @allure.title("查询购物车信息的接口")
     @pytest.mark.parametrize(
         "case_id, request_data, expected_results",
         load_yaml_test_data(DATA_FILE)

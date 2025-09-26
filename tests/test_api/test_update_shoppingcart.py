@@ -1,4 +1,5 @@
 import allure
+import pytest
 import yaml
 from pathlib import Path
 from utils.assertion_handler import execute_assertions
@@ -7,7 +8,7 @@ from utils.assertion_handler import execute_assertions
 TEST_DIR = Path(__file__).resolve().parent
 DATA_FILE = TEST_DIR.parent.parent / 'data' / 'update_shoppingcart.yaml'
 
-
+@pytest.mark.shopping_cart
 @allure.feature("Shopping Cart Operations")
 class TestUpdateShoppingCart:
     """

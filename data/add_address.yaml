@@ -1,0 +1,72 @@
+interfaces:
+  add_address:
+    url: /wx/address/save
+    method: POST
+    headers:
+      Content-Type: application/json
+
+test_cases:
+  add_address_success:
+    addressDetail: "殿下地铁站"
+    areaCode: "350203"
+    city: "厦门市"
+    country: ""
+    county: "思明区"
+    isDefault: false
+    name: "测试nama"
+    postalCode: ""
+    province: "福建省"
+    tel: "12309987656"
+
+  add_address_fail_null_name:
+    addressDetail: "殿下地铁站"
+    areaCode: "350203"
+    city: "厦门市"
+    country: ""
+    county: "思明区"
+    isDefault: false
+    name: ""
+    postalCode: ""
+    province: "福建省"
+    tel: "12309987656"
+
+  add_address_fail_null_tel:
+    addressDetail: "殿下地铁站"
+    areaCode: "350203"
+    city: "厦门市"
+    country: ""
+    county: "思明区"
+    isDefault: false
+    name: "测试nama"
+    postalCode: ""
+    province: "福建省"
+    tel: ""
+
+  add_address_fail_null_addressdetail:
+    addressDetail: ""
+    areaCode: "350203"
+    city: "厦门市"
+    country: ""
+    county: "思明区"
+    isDefault: false
+    name: "测试nama"
+    postalCode: ""
+    province: "福建省"
+    tel: "12309987656"
+
+expected:
+  add_address_success:
+    errno: 0
+    errmsg: 成功
+
+  add_address_fail_null_name:
+    errno: 401
+    errmsg: 参数不对
+
+  add_address_fail_null_tel:
+    errno: 401
+    errmsg: 参数不对
+
+  add_address_fail_null_addressdetail:
+    errno: 401
+    errmsg: 参数不对

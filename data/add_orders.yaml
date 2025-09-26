@@ -1,0 +1,18 @@
+interfaces:
+  add_orders:
+    url: /wx/order/submit
+    method: POST
+    headers:
+      Content-Type: application/json
+
+test_cases:
+  add_success:
+    "addressId": "2"
+    "cartId": "8"
+    "couponId": "0"
+    "message": "测试数据"
+
+expected:
+  add_success:
+    errno: 0
+    errmsg: 成功

@@ -1,0 +1,12 @@
+interfaces:
+  delete_orders:
+    url: /wx/order/cancel
+    method: POST
+    headers:
+      Content-Type: application/json
+
+
+expected:
+  delete_success:
+    errno: 0
+    errmsg: 成功

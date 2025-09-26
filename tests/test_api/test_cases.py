@@ -13,11 +13,15 @@ DATA_FILE = TEST_DIR.parent.parent / 'data' / 'test_data.yaml'
 class TestAuth:
 
     @allure.story("User Login")
+    @allure.title("测试成功登录")
     @pytest.mark.parametrize(
         "case_id, request_data, expected_results",
         load_yaml_test_data(DATA_FILE)
     )
     def test_login_scenarios(self, base_url, logger, case_id, request_data, expected_results):
+        """
+        测试场景：成功登录。
+        """
         allure.dynamic.title(f"【关键字驱动】登录测试：{case_id}")
 
         logger.info(f"===== 开始执行登录测试场景: {case_id} =====")

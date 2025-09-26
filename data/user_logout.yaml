@@ -1,0 +1,17 @@
+interfaces:
+  logout:
+    url: /wx/auth/logout
+    method: POST
+    headers:
+      Content-Type: application/json
+
+
+test_cases:
+  logout_success:
+    username: user123
+    password: user123
+
+expected:
+  logout_success:
+    errno: 0
+    errmsg: 成功

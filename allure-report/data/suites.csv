@@ -1,17 +1,6 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"
-一个函数覆盖所有登录场景（成功、失败等）。
-","150","【关键字驱动】登录测试：login","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestAuth","test_cases","",""
-"","165","Test successful login","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:03 CST 2025","TestAuth","test_cases","",""
-"
-一個函數覆蓋所有添加購物車的測試場景。
-","69","【關鍵字驅動】購物車測試：add_success","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestShoppingCart","test_add_shopptcart","",""
-"
-一個函數覆蓋所有添加購物車的測試場景。
-","63","【關鍵字驅動】購物車測試：add_null_goodsId","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestShoppingCart","test_add_shopptcart","",""
-"
-一個函數覆蓋所有添加購物車的測試場景。
-","102","【關鍵字驅動】購物車測試：add_insufficient_stock","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestShoppingCart","test_add_shopptcart","",""
+"","69","【关键字驱动】购物车测试：add_not_exist_goods","tests.test_api","Fri Sep 26 13:56:58 CST 2025","passed","Fri Sep 26 13:56:58 CST 2025","TestShoppingCart","test_add_shopptcart","",""
+"","183","【关键字驱动】购物车测试：add_success","tests.test_api","Fri Sep 26 13:56:58 CST 2025","passed","Fri Sep 26 13:56:58 CST 2025","TestShoppingCart","test_add_shopptcart","",""
 "
 测试场景：已认证用户成功获取个人信息。
 
@@ -20,10 +9,39 @@
 2. 使用 authenticated_client (已自动登录) 调用 'info' 接口。
 3. 验证响应状态码和业务码是否符合预期。
 ","61","Test getting user info successfully","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:04 CST 2025","TestUserInfo","test_user_info","",""
-"","64","Test login failure - invalid credential","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:03 CST 2025","TestAuth","test_cases","",""
+"
+测试一个商品的完整生命周期：
+1. 添加一个新商品到购物车。
+2. 验证商品已存在，并修改其数量。
+3. 验证数量已修改，并删除该商品。
+4. 验证商品已被删除。
+","501","测试完整的购物车流程：添加 -> 修改 -> 删除","tests.multiple_api","Fri Sep 26 13:56:56 CST 2025","passed","Fri Sep 26 13:56:56 CST 2025","TestCartFlow","test_cart_flow","",""
+"","153","test_delete_orders","tests.test_api","Fri Sep 26 13:56:59 CST 2025","passed","Fri Sep 26 13:56:59 CST 2025","TestDeleteOrders","test_delete_order","",""
 "
 一个函数覆盖所有获取用户信息的场景。
 ","62","【关键字驱动】获取用户信息测试：get_info_success","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:50 CST 2025","TestUserInfo","test_user_info","",""
+"","165","Test successful login","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:03 CST 2025","TestAuth","test_cases","",""
+"","160","test_delete_address","tests.test_api","Fri Sep 26 13:56:59 CST 2025","passed","Fri Sep 26 13:56:59 CST 2025","TestDeleteAddress","test_delete_address","",""
+"","76","新增收货地址测试：add_address_fail_null_name","tests.test_api","Fri Sep 26 13:56:57 CST 2025","passed","Fri Sep 26 13:56:57 CST 2025","TestAddAddress","test_add_address","",""
+"","181","新增收货地址测试：add_address_success","tests.test_api","Fri Sep 26 13:56:57 CST 2025","passed","Fri Sep 26 13:56:57 CST 2025","TestAddAddress","test_add_address","",""
+"","171","新增订单测试：add_success","tests.test_api","Fri Sep 26 13:56:57 CST 2025","passed","Fri Sep 26 13:56:57 CST 2025","TestAddOrders","test_add_orders","",""
+"","92","新增收货地址测试：add_address_fail_null_addressdetail","tests.test_api","Fri Sep 26 13:56:57 CST 2025","passed","Fri Sep 26 13:56:57 CST 2025","TestAddAddress","test_add_address","",""
 "
-一个函数覆盖所有登录场景（成功、失败等）。
-","72","【关键字驱动】登录测试：login_fail","tests.test_api","Mon Sep 22 10:52:49 CST 2025","passed","Mon Sep 22 10:52:49 CST 2025","TestAuth","test_cases","",""
+一个函数覆盖所有查询购物车的场景。
+","96","【关键字驱动】查询购物车测试：info","tests.test_api","Fri Sep 26 13:57:00 CST 2025","passed","Fri Sep 26 13:57:00 CST 2025","TestShoppingCartInfo","test_query_shoppingcart_info","",""
+"
+测试场景：成功将购物车中一个商品的数量修改为5。
+","163","测试成功修改购物车中商品的数量","tests.test_api","Fri Sep 26 13:57:00 CST 2025","passed","Fri Sep 26 13:57:01 CST 2025","TestUpdateShoppingCart","test_update_shoppingcart","",""
+"","94","【关键字驱动】登录测试：login_fail","tests.test_api","Fri Sep 26 13:56:58 CST 2025","passed","Fri Sep 26 13:56:58 CST 2025","TestAuth","test_cases","",""
+"","167","【关键字驱动】登录测试：login","tests.test_api","Fri Sep 26 13:56:58 CST 2025","passed","Fri Sep 26 13:56:58 CST 2025","TestAuth","test_cases","",""
+"","84","【关键字驱动】购物车测试：add_number_zero","tests.test_api","Fri Sep 26 13:56:58 CST 2025","passed","Fri Sep 26 13:56:58 CST 2025","TestShoppingCart","test_add_shopptcart","",""
+"
+一个函数覆盖所有获取用户信息的场景。
+","143","【关键字驱动】获取用户信息测试：info","tests.test_api","Fri Sep 26 13:57:01 CST 2025","passed","Fri Sep 26 13:57:01 CST 2025","TestUserInfo","test_user_info","",""
+"","80","【关键字驱动】购物车测试：add_insufficient_stock","tests.test_api","Fri Sep 26 13:56:58 CST 2025","passed","Fri Sep 26 13:56:58 CST 2025","TestShoppingCart","test_add_shopptcart","",""
+"","64","Test login failure - invalid credential","tests","Fri Sep 19 14:18:03 CST 2025","passed","Fri Sep 19 14:18:03 CST 2025","TestAuth","test_cases","",""
+"
+测试场景：成功删除一个由 fixture 准备好的商品。
+","102","测试成功删除购物车中的商品","tests.test_api","Fri Sep 26 13:56:59 CST 2025","passed","Fri Sep 26 13:57:00 CST 2025","TestDeleteShoppingCart","test_delete_shoppingcart","",""
+"","67","新增收货地址测试：add_address_fail_null_tel","tests.test_api","Fri Sep 26 13:56:57 CST 2025","passed","Fri Sep 26 13:56:57 CST 2025","TestAddAddress","test_add_address","",""
+"","68","【关键字驱动】购物车测试：add_null_goodsId","tests.test_api","Fri Sep 26 13:56:58 CST 2025","passed","Fri Sep 26 13:56:58 CST 2025","TestShoppingCart","test_add_shopptcart","",""

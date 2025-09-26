@@ -1,0 +1,12 @@
+interfaces:
+  delete_address:
+    url: /wx/address/delete
+    method: POST
+    headers:
+      Content-Type: application/json
+
+
+expected:
+  delete_success:
+    errno: 0
+    errmsg: 成功

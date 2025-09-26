@@ -62,7 +62,7 @@ def base_url(request):
     return request.config.getini('base_url')
 
 
-@pytest.fixture
+@pytest.fixture(scope='class')
 def logger(request):
     """
     为每个测试用例创建一个带有上下文（测试用例名称）的 logger。
@@ -73,7 +73,7 @@ def logger(request):
     return adapter
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="class")
 def logged_in_keywords(base_url, logger):
     keywords = Keywords(base_url, logger)
     login_response = keywords.login("user123", "user123")
@@ -114,3 +114,19 @@ def prepared_cart_item(logged_in_keywords):
     print("\n--- 开始执行 Teardown 清理 ---")
     keywords.delete_cart_item(productIds=[found_product_id])
     print("--- Teardown 清理完成 ---")
+
+
+# @pytest.fixture(scope="function")
+# def prepared_orderid(logged_in_keywords):  #新增一个订单获取orderId，为删除订单准备数据
+#     keywords = logged_in_keywords
+#
+#     test_addressid = 2
+#     test_cartid = 3
+#     test_couponid = ''
+#     test_message = '取消订单准备的订单数据'
+#
+#     add_response = keywords.add_orders(test_addressid, test_cartid, test_couponid, test_message)
+#
+#     return add_response.get('data', {}).get('orderId')
+
+

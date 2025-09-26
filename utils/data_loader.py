@@ -30,3 +30,9 @@ def load_yaml_test_data(data_file_path):
             test_data_list.append(pytest.param(case_id, {}, expected_results, id=case_id))
 
     return test_data_list
+
+def load_full_yaml_data(data_file_path):
+    """新增函数：返回完整的YAML数据（字典类型）"""
+    with data_file_path.open('r', encoding='utf-8') as f:
+        full_data = yaml.safe_load(f)  # 直接返回完整解析后的YAML数据
+    return full_data

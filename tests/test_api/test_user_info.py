@@ -16,6 +16,7 @@ class TestUserInfo:
     """
 
     @allure.story("Get User Information")
+    @allure.title("获取用户信息")
     @pytest.mark.parametrize(
         "case_id, request_data, expected_results",
         load_yaml_test_data(DATA_FILE)
