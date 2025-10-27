@@ -1,3 +1,0 @@
-[32mINFO    [0m RequestHandler:request_handler.py:17 POST http://112.126.74.187/wx/auth/login with status 200
-[32mINFO    [0m Keywords:keywords.py:13 Login keyword executed
-[32mINFO    [0m RequestHandler:request_handler.py:12 GET http://112.126.74.187/wx/auth/info with status 200
