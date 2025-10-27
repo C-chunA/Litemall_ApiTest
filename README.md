@@ -71,7 +71,7 @@ pytest-metadata
 pip install -r requirements.txt
 
 
-确保本地已安装并配置好 Allure 命令行工具（用于生成报告）。
+确保本地已安装并配置好 Allure 命令行工具（用于生成报告）。参考 Allure 官方文档进行安装。
 
 2. 配置
 
@@ -81,7 +81,7 @@ base_url: 设置被测 API 的基础 URL。
 
 markers: 注册自定义的 Pytest 标记 (例如 shopping_cart, login)，用于筛选测试用例。
 
-日志相关的配置 (log_cli_*, log_file_*)，包括日志格式、级别和文件路径。
+日志相关的配置 (log_cli_*)，用于控制台日志的格式和级别。文件日志的配置由 tests/conftest.py 管理。
 
 3. 运行测试
 
